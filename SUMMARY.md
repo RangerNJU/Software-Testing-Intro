@@ -7,7 +7,7 @@
 * [第一章-软件测试简介](ch1/README.md)
   * [走进软件测试](ch1/01-01-example-to-st.md)
   * [软件测试的基本概念](ch1/01-02-basic-concepts.md)
-  * [你将收获到的东西](ch1/01-03-thing-to-get.md)
+  * [你将收获到的东西](ch1/01-03-things-to-get.md)
 * [第二章-(1)黑盒白盒测试](ch2/README.md)
   * [白盒静态-代码审查](ch2/02-01-white-static.md)
   * [白盒动态-结构覆盖](ch2/02-02-white-dynamic.md)
