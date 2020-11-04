@@ -8,6 +8,8 @@ Getting started with software testing. Read this and refresh your career!
 
 软件测试简介。阅读此书，刷新自己的职业体验！
 
+*学生党学业繁忙，本repo只能当成网络笔记了……主要的精力投入到[另外一个repo](https://github.com/RangerNJU/Static-Program-Analysis-Book)的编写中。*
+
 ## 我想听到你的声音
 
 -   **批评的意见很有价值。**这是我第一次书写教程，一定有很多做得不好的地方。如果你觉得我写得不好，可以选择提issue或者通过邮箱联系我（ranger.nju#gmail.com)。
