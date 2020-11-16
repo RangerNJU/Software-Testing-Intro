@@ -4,15 +4,24 @@
 
 [《软件测试简介》GitHub项目地址](https://github.com/RangerNJU/Software-Testing-Intro)
 
-Getting started with software testing. Read this and refresh your career!
+Software testing introduction. An introductory booklet written for friends who are interested in software quality assurance.
 
-软件测试简介。阅读此书，刷新自己的职业体验！
+软件测试简介。为对软件质量保障感兴趣的小伙伴们撰写的入门小册子。
 
-*学生党学业繁忙，本repo只能当成网络笔记了……主要的精力投入到[另外一个repo](https://github.com/RangerNJU/Static-Program-Analysis-Book)的编写中。*
+## 进度条
+
+-   Dec. 16th 2020 通用测试方法部分完结，撒花！
+-   由于时间关系，暂时停止本仓库的更新。课程后半部分会介绍一系列的特殊测试方法，这部分测试方法相对冷门，可能只有少部分小伙伴会对其感兴趣。如果你对他们感兴趣，可以提issue或者给我的邮箱发邮件催更。这些方法包括：
+    -   随机测试、自适应随机测试、组合测试
+    -   基于约束的测试 
+    -   基于搜索的测试、有限状态机测试
+    -   变异测试、蜕变测试
+    -   Fuzzing、故障注入测试、智能软件测试
+-   目前主要精力在[另外一个repo](https://github.com/RangerNJU/Static-Program-Analysis-Book)的编写上
 
 ## 我想听到你的声音
 
--   **批评的意见很有价值。** 这是我第一次书写教程，一定有很多做得不好的地方。如果你觉得我写得不好，可以选择提issue或者通过邮箱联系我（ranger.nju#gmail.com)。
+-   **批评的意见很有价值。** 本简介一定有很多做得不好的地方。如果你觉得我写得不好，可以选择提issue或者通过邮箱联系我（ranger.nju#gmail.com)。
 -   如果你觉得我写得不错，可以到GitHub仓库中给我一个Star，也可以在自己的社交圈子中宣传，让更多的人了解这个项目。
 
 # 本简介对谁有用？
@@ -36,13 +45,13 @@ Getting started with software testing. Read this and refresh your career!
 
 ## 软件测试的学术界简介
 
-根据一个知名网站（TODO：在10月20日的PPT里，尚未上传到课程网站）的统计与调查，**数年前软件测试领域的前十大重要的课题，在今天依然存在。**
+根据一个知名软件测试领域的网站的统计与调查，**数年前软件测试领域的前十大重要的课题，在今天依然存在。**
 
 作者所在的大学以人工智能和软件方向见长，有许多老师在“给软件找bug”这件事情上做出了**非常酷炫的成果**。比如：
 
 1.  用随机测试的方法给GCC找出了一批真实的bug。
-2.  用特殊方法对并行程序进行测试。（提到并行软件的测试，有一款开源软件能够**记录下程序运行过程中的每一个细节并回放，从而保证复现bug**）
-3.  跳出程序分析领域的固有认知，提出新的分析方法实现高精度高速度的分析。
+2.  用特殊方法对并行程序进行测试。（例如，有一款叫做[rr](https://rr-project.org/)的开源软件能够**记录下程序运行过程中的每一个细节并回放，从而保证复现bug**）
+3.  [跳出程序分析领域的固有认知，提出新的分析方法](https://cs.nju.edu.cn/50/1b/c1654a479259/page.htm)实现高精度高速度的分析。
 4.  利用人工智能的方法为软件找bug。
 
 

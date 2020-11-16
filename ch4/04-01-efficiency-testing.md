@@ -1,8 +1,10 @@
 # 软件运行效率测试
 
+>   天下武功，唯快不破。
+
 说到软件，你可能会想到自己笔记本电脑上有不少在本地运行的软件，但当下有很多大规模的基于Web的的软件。对于后者来说，非功能性的软件属性很重要。
 
-<img src="04-01-efficiency-testing.assets/image-20201104210622334.png" alt="image-20201104210622334" style="zoom:50%;" />
+<img src="04-01-efficiency-testing.assets/image-20201104210622334.png" style="zoom:50%;" />
 
 -   检测问题：长时间的测试执行有助于**揭示程序中的隐含的问题**或冲突（e.g., memory leak）。<u>当然，用静态程序分析的方法也能够完成memory leak的检测，而且从效果上来说比软件测试的方法更好。如果你感兴趣，可以到看看我的另一个公开Gitbook，在本书简介（github上的README也有）的末尾有相关链接。</u>
 -   评价性能指标：验证软件系统是否能够达到用户提出的**性能指标**，同时发现软件系统中存在的**性能瓶颈**
@@ -11,7 +13,7 @@
 
  通常来说，对于一个基于Web的服务应用来说，其硬件利用率，吞吐量和响应时间与负载的关系如图所示：
 
-<img src="04-01-efficiency-testing.assets/image-20201104215925261.png" alt="image-20201104215925261" style="zoom:50%;" />
+<img src="04-01-efficiency-testing.assets/image-20201104215925261.png" style="zoom:50%;" />
 
 1.  硬件利用率（服务器端的CPU、内存使用率等）
 2.  吞吐量（有效运输的数据量）
@@ -32,7 +34,7 @@
 
 
 
-<img src="04-01-efficiency-testing.assets/image-20201104220830583.png" alt="image-20201104220830583" style="zoom:50%;" />
+<img src="04-01-efficiency-testing.assets/image-20201104220830583.png" style="zoom:50%;" />
 
 以学校教务网为例，我们可以这么理解：
 
@@ -43,7 +45,7 @@
 
 ## 负载测试的设计执行
 
-通常来说按照以下流程执行：<img src="04-01-efficiency-testing.assets/image-20201104221014450.png" alt="image-20201104221014450" style="zoom:50%;" />
+通常来说按照以下流程执行：<img src="04-01-efficiency-testing.assets/image-20201104221014450.png" style="zoom:50%;" />
 
 ### 设计负载的方式选择
 
@@ -62,7 +64,7 @@
 
 具体来说，Workload会有固定的比例，如以电商网站为例，可能大部分流量都是浏览的。其次，测试时可以步进式的增加强度。
 
-<img src="04-01-efficiency-testing.assets/image-20201104221830875.png" alt="image-20201104221830875" style="zoom:50%;" />
+<img src="04-01-efficiency-testing.assets/image-20201104221830875.png" style="zoom:50%;" />
 
 <u>注意需要随着软件的发展及时更新Workload Mix Profile。例如，一个电商网站在不同时候用户进行不同行为的比例可能会有较大的变化。</u>
 
@@ -76,7 +78,7 @@
 
 >   ​	请大量的真实用户来进行测试。
 
-<img src="04-01-efficiency-testing.assets/image-20201105163923186.png" alt="image-20201105163923186" style="zoom:50%;" />
+<img src="04-01-efficiency-testing.assets/image-20201105163923186.png" style="zoom:50%;" />
 
 优缺点都很明显：
 
