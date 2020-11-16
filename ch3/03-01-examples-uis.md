@@ -4,9 +4,9 @@
 
 ## 单元测试有多重要？
 
->    $1.01^{365}=37.8$
+>    1.01的365次方是37.8
 >
->   $0.99^{365}=0.03$
+>   0.99的365次方是0.03
 
 单元质量能够决定系统的质量，一个系统由众多的单元构成。当每个单元的可靠性都足够高，系统的可靠性才足够高。
 
@@ -46,7 +46,7 @@
 -   （单元测试是）*一种验证行为*，**能够为后续的开发提供支援，为代码的重构提供保障。**
 -   *一种设计行为*，使我们从调用者的角度观察和思考（Test Driven Development-测试驱动开发）
 -   *一种编写文档行为*，是展示功能的最佳文档（Linux工具tldr与man的对比）
--   *回归性*，可以随时随地的快速运行测试（Automation）（TODO：jyy提到的改动时自动编译运行）
+-   *回归性*，可以随时随地的快速运行测试（Automation）（例如，在上jyy的课程时，老师提到能够通过inotify和其他脚本实现**改动源代码时自动编译运行**。如果你也想试试，可以参考[这个网站](https://dave.cheney.net/2016/06/21/automatically-run-your-packages-tests-with-inotifywait)）
 
 ## 实践中单元测试怎么操作？
 
@@ -84,19 +84,19 @@
 
 
 
-## 单元测试的五块钱（TODO）
+## 关于单元测试，再多说五块钱的？
 
 -   分而治之的基本思想
     -   各种经典的算法都采用分而治之的思想，
     -   近年兴起的分布式计算与边缘计算等研究应用领域，也是这一思想的应用
 -   Flaky Test
     -   Flaky Test主要关注这一问题：在有的测试实践中，当输入的测试用例顺序不同时，有时程序能通过测试，有时则不能通过。
-    -   如果你感兴趣，可以查看这里（TODO）。
+    -   如果你感兴趣，可以查看[这里](https://docs.gitlab.com/ee/development/testing_guide/flaky_tests.html)。
 -   Test Driven Development
     -   直观地说，你可以先写测试用例，然后针对测试用例编程。这种开发方式的优点在于开发人员能够控制并掌握开发的进度。
-    -   如果你感兴趣，可以查看这里（TODO）。
--   Linux工具tldr与man的对比
-    -   jyy老师倾情推荐
+    -   如果你感兴趣，可以查看[这里](https://en.wikipedia.org/wiki/Test-driven_development)。
+-   Linux工具[tldr](https://tldr.sh/)与man的对比
+    -   jyy老师倾情推荐，一图流安利：<img src="03-01-examples-uis.assets/image-20201116174701746.png" style="zoom:50%;" />
 -   Java不需要delete-语言设计时的内存管理机制
     -   语言的内存管理机制是一个非常有趣的话题
     -   C/C++给程序编写者自由地动态分配内存的权力，他们也自动地需要承担管理内存的责任。不谨慎的程序员往往会遇到段错误或内存泄漏。
@@ -141,10 +141,6 @@
 <img src="03-01-examples-uis.assets/image-20201103203049476.png" style="zoom:50%;" />
 
 当然我们希望将大部分路径Cover住。
-
-# 集成测试的五块钱(TODO)
-
--   计算机世界随处可见的Trade-Off（UDP/TCP与QuickUDP，存储器山）
 
 # 系统测试
 
