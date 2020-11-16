@@ -13,7 +13,7 @@
 
 实际的例子：Daily Build and Smoke Test-Microsoft
 
-<img src="03-02-examples-srab.assets/image-20201104200941107.png" alt="image-20201104200941107" style="zoom:50%;" />
+<img src="03-02-examples-srab.assets/image-20201104200941107.png" style="zoom:50%;" />
 
 在每日构建完成后，对系统的基本功能进行简单的测试，是将代码更改提交到代码库之前的验证过程。
 
@@ -62,7 +62,7 @@
 
 2.  思考：挑选出部分用例，使得所有与代码变化相关的部分都能被检测到
 
-3.  实现：举个例子。<img src="03-02-examples-srab.assets/image-20201104201902051.png" alt="image-20201104201902051" style="zoom:50%;" />
+3.  实现：举个例子。<img src="03-02-examples-srab.assets/image-20201104201902051.png" style="zoom:50%;" />
 
     在图中，由于新加入的变化使得程序在执行语句2后的执行内容发生了变化，我们**选取所有会执行过程经过语句2及其之后的语句的用例**。
 
@@ -76,7 +76,7 @@
 
 3.  实现：给定一个fault matrix（t为测试用例，f为可能检测到的错误），应用贪心算法。
 
-    <img src="03-02-examples-srab.assets/image-20201104202710618.png" alt="image-20201104202710618" style="zoom:50%;" />
+    <img src="03-02-examples-srab.assets/image-20201104202710618.png" style="zoom:50%;" />
 
 4.  进阶：需要注意的是，我们无法在测试前得到精确的fault matrix，即这个矩阵只有在测试结束之后才能生成。在实践中可以选择statement coverage或cost来评价重要程度。
 
@@ -109,4 +109,4 @@
 
 最后图一乐：
 
-<img src="03-02-examples-srab.assets/image-20201104203555099.png" alt="image-20201104203555099" style="zoom:50%;" />
+<img src="03-02-examples-srab.assets/image-20201104203555099.png" style="zoom:50%;" />

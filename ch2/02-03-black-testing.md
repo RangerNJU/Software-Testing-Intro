@@ -46,8 +46,6 @@
 
 *这一部分上课没有讲得很细致，不过ISO的Testing标准中有提到相关的测试方法，感兴趣的同学可以去看看论文。*
 
-
-
 # 语法测试
 
 Why-observation：用户的输入可能是任意的，而：
@@ -55,17 +53,13 @@ Why-observation：用户的输入可能是任意的，而：
 -   Good user interface designers design their systems so that it just doesn’t accept “garbage” inputs
 -   Good testers subject systems to the most creative “garbage” possible
 
-
-
 How-testing the syntax
 
 -   Test the “normal” conditions by covering the BNF syntax graph of the input language
 -   Test the “garbage” conditions by testing the system against invalid data
 
-
-
 Example
 
-<img src="02-03-black-testing.assets/image-20201103185406875.png" alt="image-20201103185406875" style="zoom:50%;" />
+<img src="02-03-black-testing.assets/image-20201103185406875.png" style="zoom:50%;" />
 
 在iOS系统上计算的结果是110，表示的语义是“消费100元，外加10%的小费，总共需要支付多少钱”。

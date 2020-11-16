@@ -12,7 +12,7 @@ Getting started with software testing. Read this and refresh your career!
 
 ## 我想听到你的声音
 
--   **批评的意见很有价值。**这是我第一次书写教程，一定有很多做得不好的地方。如果你觉得我写得不好，可以选择提issue或者通过邮箱联系我（ranger.nju#gmail.com)。
+-   **批评的意见很有价值。** 这是我第一次书写教程，一定有很多做得不好的地方。如果你觉得我写得不好，可以选择提issue或者通过邮箱联系我（ranger.nju#gmail.com)。
 -   如果你觉得我写得不错，可以到GitHub仓库中给我一个Star，也可以在自己的社交圈子中宣传，让更多的人了解这个项目。
 
 # 本简介对谁有用？

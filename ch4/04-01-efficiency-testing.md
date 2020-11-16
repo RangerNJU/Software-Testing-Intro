@@ -17,9 +17,7 @@
 2.  吞吐量（有效运输的数据量）
 3.  响应时间（字面意思，和用户体验密切相关）
 
-
-
-# 负载测试（Load testing）
+# Load testing
 
 >   ​	检测系统在不同负载下的表现。检测系统在不同负载下的表现。使系统承担不同的工作量，评估其在不同工作量下的行为、以及持续正常运行的能力。
 
@@ -28,11 +26,11 @@
 -   功能相关的问题（e.g., deadlock）
 -   非功能相关的问题（e.g., performance, reliability）
 
-
-
 ## 典型的系统负载模式
 
-<img src="04-01-efficiency-testing.assets/image-20201104220654874.png" alt="image-20201104220654874" style="zoom:50%;" />![image-20201104220716780](04-01-efficiency-testing.assets/image-20201104220716780.png)
+<img src="04-01-efficiency-testing.assets/image-20201104220654874.png" style="zoom:50%;" />
+
+
 
 <img src="04-01-efficiency-testing.assets/image-20201104220830583.png" alt="image-20201104220830583" style="zoom:50%;" />
 
@@ -43,13 +41,22 @@
 -   Spike(不加节制的脚本选课，让服务器超负荷，很容易被抓然后吃处分)
 -   Break(压力上不封顶，就是要看看怎样会把服务器搞坏)
 
-## 负载测试的执行
+## 负载测试的设计执行
 
 通常来说按照以下流程执行：<img src="04-01-efficiency-testing.assets/image-20201104221014450.png" alt="image-20201104221014450" style="zoom:50%;" />
 
-接下来介绍实践中的四种实际的设计Load的方式：
+### 设计负载的方式选择
 
-### Realistic
+接下来介绍实践中四种实际的设计Load的方式：
+
+-   Realistic
+-   Fault-inducing
+-   Live-user
+-   Driver-Based
+
+---
+
+**Realistic**
 
 >   ​	derive load from historic data (note that field workloads might change over time).
 
@@ -57,58 +64,102 @@
 
 <img src="04-01-efficiency-testing.assets/image-20201104221830875.png" alt="image-20201104221830875" style="zoom:50%;" />
 
+<u>注意需要随着软件的发展及时更新Workload Mix Profile。例如，一个电商网站在不同时候用户进行不同行为的比例可能会有较大的变化。</u>
 
-
-<u>注意需要随着软件的发展及时更新Workload Mix Profile。</u>
-
-### Fault-inducing
+**Fault-inducing**
 
 >   Identifies potential load sensitive modules and regions for load sensitive faults  (e.g., memory leaks, incorrect dynamic memory allocation)
 
 一句话举例子解释：由静态程序分析的方法或建模的方法找到可能产生memory leak的程序点，针对这样可能产生问题的点进行动态的测试）。
 
-### Live-user
+**Live-user**
 
-（优缺点都很明显）
+>   ​	请大量的真实用户来进行测试。
 
-### Driver-basic
+<img src="04-01-efficiency-testing.assets/image-20201105163923186.png" alt="image-20201105163923186" style="zoom:50%;" />
 
-（经常被使用，缺点是需要较为复杂的配置，也难以track相关的表现）
+优缺点都很明显：
+
+-   优点：能够反应用户的真实行为，也能够得到真实用户对于性能的直观反馈
+-   缺点：难以扩大规模（Hard to scale），测试的复杂度受限（Limited test complexity due to manual coordination）
+
+**Driver-based**
+
+>   ​	 Use some specialized benchmarking tools (e.g., LoadGen), or centralized load drivers (e.g, LoadRunner)
+
+-   优点：易于自动化，易于扩大规模
+-   缺点：需要较为复杂的配置，也难以跟踪特定的系统行为（Hard to track some system behaviour ）如音频与图像的质量
+
+### 负载测试的过程
+
+-   Test Setup
+    -   tester recruitment, setup and training / programming and store-and-replay configuration …
+-   Load generation and termination
+    -   static configuration (e.g., counter-driven, time-driven) / dynamic feedback …
+-   Test monitoring and data collection
+    -   test monitoring tools (e.g., Task Manager, Jconsole, App Dynamics)
+
+### 负载测试结果的分析
+
+#### Verifying Against Threshold Values
+
+• Straight-forward comparison
+
+• Comparison against processed data (maximum, 
+average, …)
+
+• What will the estimated reliability be?
+
+#### Detecting Known Problems Using Patterns
+
+-   Patterns in the memory utilizations
+-   • Patterns in the logs (error keywords)
+
+如左图是一个有死锁问题的程序执行时的CPU负载pattern，而右图为修复后的情况：
+
+<img src="04-01-efficiency-testing.assets/image-20201116103313566.png"  style="zoom:50%;" />
+
+# Stress Testing
+
+>   检测系统在**极限情况**下的表现。通过模拟负载，使系统在负载饱和或资源匮乏的状态下运行。可以被看作是负载测试的一种，即高负载下
+>   的负载测试。
+
+作用：了解系统的稳定性，明确系统在极端环境和压力下的表现，并发现系统在某些功能方面的隐患。
+
+分类：
+
+1.  稳定性压力测试：高负载下的长时间测试
+2.  破坏性压力测试：极限负载情况下导致系统崩溃的测试
+
+# Volume Testing
+
+>   检测系统在**大数据量或大量用户**下的表现
+
+-   容量测试通常和数据库有关
+-   容量测试通常仅关注大容量，而不表现实际的使用
+
+# Performance Testing
+
+>   评估系统的**性能指标**。
+
+-   使用自动化的测试工具来模拟多种正常、峰值以及
+    异常的负载条件
+-   获取软件的性能指标，发现瓶颈并优化软件
+
+<img src="04-01-efficiency-testing.assets/image-20201116104023090.png" style="zoom:50%;" />
+
+<img src="04-01-efficiency-testing.assets/image-20201116104053203.png" style="zoom:50%;" />
 
 
 
-（TODO-引用PPT）Pattern-based: 例-Fix deadlock
+# Summary
 
-Stress Testing
+**面向指标评估**
 
-Performance Testing
+-   性能测试：评估系统性能
 
-小结
+**面向缺陷发现**
 
-
-
-
-
-（TODO：在录音里摘录Reliability和Dependability的内容）
-
-
-
-可靠性：指标？
-
-
-
-Operational profile based 
-
--   定义
--   启发和做法
--   Tips
-
-
-
-安全测试
-
--   重要性
--   分类举例
--   细分
-    -   用户认证-who are you?
-    -   用户授权-what can you do?
+-   负载测试：在不同负载下的表现
+-   压力测试：在高负载和极端条件下长时间运行的稳定性
+-   容量测试：在大数据量下的表现

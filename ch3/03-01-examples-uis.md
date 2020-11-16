@@ -2,8 +2,6 @@
 
 # 单元测试
 
-## 单元测试的基本内容与概念
-
 ## 单元测试有多重要？
 
 >    $1.01^{365}=37.8$
@@ -54,7 +52,13 @@
 
 ### 常用工具
 
-<img src="03-01-examples-uis.assets/image-20201103192140899.png" alt="image-20201103192140899" style="zoom:50%;" />
+这类工具能帮助我们：
+
+-   自动化地执行测试
+-   自动化地返回结果
+-   部分工具能够提示测试用例集的覆盖率
+
+<img src="03-01-examples-uis.assets/image-20201103192140899.png" style="zoom:50%;" />
 
 ### 测试用例的编写
 
@@ -66,10 +70,12 @@
 
 **用JUnit举个例子**：
 
-<img src="03-01-examples-uis.assets/image-20201103193250899.png" alt="image-20201103193250899" style="zoom:50%;" />
+<img src="03-01-examples-uis.assets/image-20201103193250899.png" style="zoom:50%;" />
 
 -   命名惯例：`class name + Test`
 -   写上`@Test`告诉JUnit接下来是一个测试方法 
+    -   这是Java语言进行高级扩展的机制，也叫元（meta）扩展机制
+    -   JUnit会按照独立程序的方式处理标识后的方法，不需要用户自己写一个main函数
 -   Initialization：如图所示
 -   Test Step
     -   Test Input-`"1+2+3"`在本例中，仍需要由测试者手动填写
@@ -84,7 +90,8 @@
     -   各种经典的算法都采用分而治之的思想，
     -   近年兴起的分布式计算与边缘计算等研究应用领域，也是这一思想的应用
 -   Flaky Test
-    -   Flaky Test主要关注这一问题：在有的测试实践中，当输入的测试用例顺序不同时，有时程序能通过测试，有时则不能通过。如果你感兴趣，可以查看这里（TODO）。
+    -   Flaky Test主要关注这一问题：在有的测试实践中，当输入的测试用例顺序不同时，有时程序能通过测试，有时则不能通过。
+    -   如果你感兴趣，可以查看这里（TODO）。
 -   Test Driven Development
     -   直观地说，你可以先写测试用例，然后针对测试用例编程。这种开发方式的优点在于开发人员能够控制并掌握开发的进度。
     -   如果你感兴趣，可以查看这里（TODO）。
@@ -113,7 +120,7 @@
     2.  特性：需要使用<u>stub（桩程序）和mock（模拟程序）</u>
         1.  stub：模拟的数据提供方。在图一中不做逻辑计算，根据输入直接return期望的返回值
         2.  mock：模拟的数据接受方。
-    3.  举个例子：<img src="03-01-examples-uis.assets/image-20201103200618862.png" alt="image-20201103200618862" style="zoom:50%;" />
+    3.  举个例子：<img src="03-01-examples-uis.assets/image-20201103200618862.png" style="zoom:50%;" />
 4.  Sandwich-混合策略（计算机世界随处可见的Trade-Off）
     1.  对软件结构中上层使用的是自顶向下方法，而对软件结构中下层使用的是自底向上方法。当被测试的软件中关键模块比较多时，实用混合策略是一种较好的折衷选择。
 
@@ -125,13 +132,13 @@
 
 一个简单的例子：
 
-<img src="03-01-examples-uis.assets/image-20201103200856692.png" alt="image-20201103200856692" style="zoom:50%;" />
+<img src="03-01-examples-uis.assets/image-20201103200856692.png" style="zoom:50%;" />
 
 假设有三个模块ABC，其中各有一组Basic Block。在每组模块中，选定起点和终点，则在A中有三组MEP，它们的起点终点分别是1，6；1，4和5，6。
 
 例如一个测试用例的运行过程可能通过如图所示的这一组路径：
 
-<img src="03-01-examples-uis.assets/image-20201103203049476.png" alt="image-20201103203049476" style="zoom:50%;" />
+<img src="03-01-examples-uis.assets/image-20201103203049476.png" style="zoom:50%;" />
 
 当然我们希望将大部分路径Cover住。
 
@@ -146,9 +153,9 @@
 -   重点测试软件产品的各**功能**是否满足用户的要求
 -   测试还包括**性能、安全性、兼容性等**软件特性及方面的测试 
 
-## The Testing Pyramid（测试的金字塔模型）
+## 测试的金字塔模型（The Testing Pyramid）
 
-<img src="03-01-examples-uis.assets/image-20201104200425649.png" alt="image-20201104200425649" style="zoom:50%;" />
+<img src="03-01-examples-uis.assets/image-20201104200425649.png" style="zoom:50%;" />
 
 图中每一块的大小直观地表达在这一测试活动上分配的资源和实践，云彩样则表示根据不同项目，其变动程度较大。左边的模型也叫冰淇淋模型，右边的模型则称为测试金字塔模型。由于在软件开发后期进行故障修复的成本比前期高很多，右侧的模型所对应的测试比重安排更佳。
 
