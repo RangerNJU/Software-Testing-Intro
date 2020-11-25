@@ -4,17 +4,17 @@
 
 现在应用较多的软件测试方法多达数十种。
 
-<img src="../.gitbook/assets/12.png" style="zoom:50%;" />
+![](../.gitbook/assets/12.png)
 
 按照测试方法主要关注的软件性质侧面，除了常见的黑盒测试白盒测试分类外，可以这样理解：
 
-<img src="../.gitbook/assets/13.png" style="zoom:50%;" />
+![](../.gitbook/assets/13.png)
 
-<img src="../.gitbook/assets/14.png" style="zoom:50%;" />
+![](../.gitbook/assets/14.png)
 
-<img src="../.gitbook/assets/15.png" style="zoom:50%;" />
+![](../.gitbook/assets/15.png)
 
-<img src="../.gitbook/assets/16.png" style="zoom:50%;" />
+![](../.gitbook/assets/16.png)
 
 这些方法将在下文中详细介绍。如果此时不太理解这些分类方法，你可以在阅读完第四章后重新回来阅读。
 
@@ -24,14 +24,15 @@
 
 ## 测试思想在生活中的应用
 
--   Testing exists everywhere
-    -   manufacturing
-    -   agriculture
-    -   shopping
-    -   education
-    -   …
--   Everyone is a tester
-    -   make friends
-    -   buy something
-    -   work
-    -   …
+* Testing exists everywhere
+  * manufacturing
+  * agriculture
+  * shopping
+  * education
+  * …
+* Everyone is a tester
+  * make friends
+  * buy something
+  * work
+  * …
+
