@@ -268,11 +268,10 @@ Usability means designing software to be effective, efficient, and satisfying fo
 **本地化和国际化不仅涉及语言翻译，还需要考虑不同 国家的使用者如何理解并使用软件。**
 
 * 阅读习惯
-
   1. 根据**阅读习惯**从左到右还是从右到左，可能需要**对UI做相应的调整**。
   2. 在有的语言中，**同样的意思需要用更大的空间**来表达，此时需要**对UI做相应的调整**。
 
-  ![](../.gitbook/assets/image-20201026110313937.png)
+![](../.gitbook/assets/image-20201026110313937.png)
 
 * 同种语言在不同地区的差异
   1. 同是英文，英美的**拼写习惯**并不一致
