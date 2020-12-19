@@ -20,6 +20,5 @@
   * [软件可靠性与安全性的测试](ch4/04-02-stable-secure-testing.md)
   * [软件用户友好性的测试](ch4/04-03-user-friendly-testing.md)
 * [第五章-进阶\(1\)特殊软件测试方法](ch5.md)
-* [番外篇-也谈兼容性测试](special/report.md)
-
+* [番外篇-也谈兼容性测试](report.md)
 
