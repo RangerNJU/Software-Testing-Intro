@@ -4,7 +4,7 @@
 
 首先，Compatibility Testing不是Compatibility Test。
 
-![image-20201217161542258](report.assets/image-20201217161542258.png)
+<img src="report.assets/image-20201217161542258.png" style="zoom:50%;" />
 
 如果有人愿意阅读Wiki的定义：
 
@@ -26,28 +26,32 @@
 
 -   Web兼容。
     -   在原生安卓手机上运行的Chrome浏览网页时，GitHub和Email的图标和背景错位：
-    -   <img src="report.assets/chromeOnAndroid.png" style="zoom: 33%;" />
+
+<img src="report.assets/chromeOnAndroid.png" style="zoom: 33%;" />
     
 -   移动应用兼容。
 
-    <img src="report.assets/image-20201217183746797.png" alt="image-20201217183746797" style="zoom:50%;" />
-
-    <img src="report.assets/image-20201217163524014.png" alt="image-20201217163524014" style="zoom:50%;" />
+<img src="report.assets/image-20201217183746797.png" style="zoom:50%;" />
+    
+<img src="report.assets/image-20201217163524014.png" style="zoom:50%;" />
 
 
 -   [网页静态生成器](https://github.com/stkevintan/canoe-blog)不向后兼容。
     -   [Jekyll](https://jekyllrb.com/)——数年间这个生成器的大版本号从2跳跃到了4，好多古老的博客模板因此失去了活力。
     
 
-<img src="report.assets/image-20201217164417569.png" alt="image-20201217164417569" style="zoom:50%;" />
-   <img src="report.assets/image-20201217163445945.png" alt="image-20201217163445945" style="zoom:50%;" />
+<img src="report.assets/image-20201217164417569.png" style="zoom:50%;" />
+
+<img src="report.assets/image-20201217163445945.png" style="zoom:50%;" />
 
 ## Or No?
 
 **不需要——只需要用户或开发者付出一点点额外的金钱/精力/时间，就能避开绝大多数兼容性问题。**
 
 -   Chrome浏览器几乎已经在事实上确立了浏览器界的垄断地位，（听说）几乎所有的网页都会特别针对Chrome浏览器做优化和测试。
-    -   <img src="report.assets/image-20201217164936421.png" alt="image-20201217164936421" style="zoom:50%;" />
+
+<img src="report.assets/image-20201217164936421.png" style="zoom:50%;" />
+
 -   同样是之前的APP发布界面，只要用户能够忍受下载文件体积更大的universal版本apk，就不需要费心去查看自己设备的处理器架构。
 -   Windows(尤其是Windows To Go)为了保证兼容性，不得不把大部分通用的驱动内置在操作系统内核中，这固然会在一定程度上“浪费”存储空间，但这能保证Windows系统能在各种不同硬件设备上正常运行。
 
@@ -77,15 +81,18 @@
 
 1.  从[F-Droid](https://f-droid.org/packages/de.danoeh.antennapod/)下载2020年11月3日更新的2.0.3版本apk文件
 2.  可免费试用的云测试平台上进行测试
-    1.  <img src="report.assets/image-20201219223520058.png" alt="提交测试" style="zoom:50%;" />
-    2.  <img src="report.assets/image-20201219224118459.png" alt="另一家测试" style="zoom:50%;" />
-3.  查看结果
+
+<img src="report.assets/image-20201219223520058.png" alt="提交测试" style="zoom:50%;" />
+
+<img src="report.assets/image-20201219224118459.png" alt="另一家测试" style="zoom:50%;" />
+
+4.  3.  查看结果
 
 ## 一个敷衍的结果
 
 这个网站的所谓免费试用测试就是帮你在不同的老手机上初始化、安装、启动、卸载……
 
-<img src="report.assets/image-20201219225123348.png" alt="image-20201219225123348" style="zoom:50%;" />
+<img src="report.assets/image-20201219225123348.png" style="zoom:50%;" />
 
 **但是！**
 
@@ -127,7 +134,7 @@
 
 -   网页的兼容性测试也有一个[好玩的站点](https://www.browserling.com/)，效果大概是这样的：
 
-<img src="report.assets/image-20201219231807726.png" alt="image-20201219231807726" style="zoom:50%;" />
+<img src="report.assets/image-20201219231807726.png"  style="zoom:50%;" />
 
 # Research Point & References
 
@@ -142,6 +149,3 @@
 -   关于Automated application compatibility testing，之前实践时所用的方法类似的思想其实早就由Google申请了[US Patent](https://patents.google.com/patent/US8996988B2/en)
 
 -   ...
-
-    
-
